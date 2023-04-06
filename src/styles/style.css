@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -11,9 +12,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: "poppins";
 }
 
-.auth {
+.auth, .room-container {
   height: 50vh;
   width: 50vw;
   background-color: #ffb085;
@@ -23,12 +25,13 @@
   justify-content: space-between;
   align-items: center;
   border-radius: 20px;
+  margin: 180px 270px;
 }
-.auth .hatirlaBox {
+.auth .hatirlaBox, .room-container .hatirlaBox {
   display: flex;
   gap: 20px;
 }
-.auth button {
+.auth button, .room-container button {
   padding: 10px 20px;
   background-color: #f9f9f9;
   border: none;
@@ -37,10 +40,79 @@
   align-items: center;
   cursor: pointer;
 }
-.auth button img {
+.auth button img, .room-container button img {
   width: 50px;
 }
 
 button:hover {
-  transform: scale(1.06);
+  transform: scale(1.03);
+}
+
+.room-container {
+  padding: 60px;
+  gap: 30px;
+  justify-content: center;
+}
+.room-container p {
+  font-size: 13px;
+}
+.room-container input {
+  border-radius: 10px;
+  width: 200px;
+  height: 35px;
+  padding-left: 20px;
+}
+
+.chat {
+  background-color: #f9f9f9;
+  height: 70vh;
+  width: 70vh;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+}
+.chat header {
+  background-color: #c499ba;
+  border-radius: 10px 10px 0 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  align-items: center;
+}
+.chat .messages {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+.chat .messages .message {
+  padding: 4px;
+  background-color: #f2789f;
+  align-self: flex-start;
+  border-radius: 4px 4px 0 4px;
+  gap: 10px;
+}
+.chat .messages .user-message {
+  padding: 4px;
+  background-color: #fbf46d;
+  align-self: flex-end;
+  border-radius: 4px 4px 0 4px;
+}
+.chat form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  gap: 10px;
+}
+.chat form input {
+  padding: 5px 10px;
+  width: 60%;
+  border-radius: 10px;
+}
+.chat form button {
+  padding: 5px 10px;
+  background-color: #65c18c;
+  border-radius: 10px;
 }/*# sourceMappingURL=style.css.map */

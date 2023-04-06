@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -10,6 +12,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: "poppins";
 }
 .auth {
   height: 50vh;
@@ -21,6 +24,7 @@
   justify-content: space-between;
   align-items: center;
   border-radius: 20px;
+  margin: 180px 270px;
   .hatirlaBox {
     display: flex;
     gap: 20px;
@@ -40,5 +44,75 @@
 }
 
 button:hover {
-  transform: scale(1.06);
+  transform: scale(1.03);
+}
+
+.room-container {
+  @extend .auth;
+  padding: 60px;
+  gap: 30px;
+  justify-content: center;
+  p {
+    font-size: 13px;
+  }
+  input {
+    border-radius: 10px;
+    width: 200px;
+    height: 35px;
+    padding-left: 20px;
+  }
+}
+
+.chat {
+  background-color: #f9f9f9;
+  height: 70vh;
+  width: 70vh;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  header {
+    background-color: #c499ba;
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    align-items: center;
+  }
+  .messages {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    .message {
+      padding: 4px;
+      background-color: #f2789f;
+      align-self: flex-start;
+      border-radius: 4px 4px 0 4px;
+      gap: 10px;
+    }
+    .user-message {
+      padding: 4px;
+      background-color: #fbf46d;
+      align-self: flex-end;
+      border-radius: 4px 4px 0 4px;
+    }
+  }
+  form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    gap: 10px;
+    input {
+      padding: 5px 10px;
+      width: 60%;
+      border-radius: 10px;
+    }
+    button {
+      padding: 5px 10px;
+      background-color: #65c18c;
+      border-radius: 10px;
+    }
+  }
 }
